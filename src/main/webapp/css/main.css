@@ -46,13 +46,34 @@
             height: 20vh;
         }
 
-        .content {
-        margin-top:80px;
-            width: 100vw;
-            height: 60vh;
-            text-align: center;
-        }
+      .content {
+  margin-top: 80px;
+  width: 100vw;
+  height: 60vh;
+  text-align: center;
+}
 
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content a {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  background-color: gray;
+  color: gray;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.content a:hover {
+  opacity: 0.9;
+}
+
+       
         .footer {
             width: 100vw;
             height: 10vh;
@@ -69,14 +90,16 @@
 
         a {
             text-decoration: none;
+
+           
         }
 
         a:link {
-            color: #00008C;
+            color: black;
         }
 
         a:visited {
-            color: #0000FF;
+            color: #000000;
         }
 
         a:hover {
@@ -125,4 +148,7 @@
 
 #demo {
     text-align: center;
+}
+a {
+  text-decoration: none;
 }

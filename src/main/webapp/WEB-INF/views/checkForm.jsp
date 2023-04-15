@@ -9,16 +9,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/checkform.css" /> 
+
 </head>
 <body>
-    <h3>학교 학생만 가입 가능합니다</h3>
-    <hr>
-    <div id="demo"></div>
+<a href="/"><img src="/img/flogo.png"></a> 
     <form name="frm">
+   <h3>학교 학생만 가입 가능합니다</h3>
+    <div id="demo"></div>
         <input type="text" id="num" name="num" placeholder="학번을 입력하세요">
         <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
     </form>
-    <button onclick="check()">인증하기</button>
+    <button onclick="check2()">인증하기</button>
 </body>
 
 
@@ -33,7 +34,7 @@
 		 document.frm.name.focus;
 		 return false;
 	 }else{
-		 return true;
+		 check();
 	 }
  }
  function check() {

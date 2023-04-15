@@ -2,26 +2,19 @@
     pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<style>
-section{
-
-width: 300px;
-
-margin: 0 auto;
-text-align: left;
-}
-</style>
+<link rel="stylesheet" href="/css/css.css" /> 
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/css/css.css" /> 
+
 </head>
 <body>
-<h1>My Page</h1>
+<a href="/"><img src="/img/flogo.png"></a>
+<a href="/"><h1>MyPage</h1></a> 
 <section>
 <hr>
-		아이디 : <input type="text" name="id" value="${sessionScope.id}" readonly ><br>
+		아이디 : <input type="text" name="id" value="${sessionScope.id}" readonly style=" border: 1px solid white" ><br>
 		<hr>
 		비밀번호 :****** <input type ="button" onclick="getShow()" value="비밀번호변경">
 		<hr>
@@ -56,13 +49,12 @@ text-align: left;
 		<input type="button" value="회원 탈퇴" onclick="userDelete()">
 		
 </body>
-</body>
 <script>
 
 
 ///////회원 탈퇴///////
 function userDelete() {
-	const id= document.querySelector("input[name='user_id']").value;
+	const id= document.querySelector("input[name='id']").value;
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
 	  let data = this.responseText;
@@ -73,7 +65,7 @@ function userDelete() {
 		  alert("오류가 발생하였습니다.");
 	  }
     }
-  xhttp.open("POST", "/user/userdelete.do?id="+id, true);
+  xhttp.open("POST", "/userdelete.do?id="+id, true);
   xhttp.send();
 }
 

@@ -4,14 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/css/css.css" /> 
+<link rel="stylesheet" href="/css/seatForm.css" />
+
 </head>
 <body>
-	
+	<p>
+	<a href="/"><img src="/img/flogo.png"></a></p>
 
 	<h2>도서관 좌석</h2>
 	<form action="seatInsert.do" method="get">
-	<input type="text" name="id" value="${sessionScope.id }" readonly><br>
+	<input type="text" name="id" value="${sessionScope.id }" readonly style=" border: 1px solid white"><br>
 	<select name="seatNo" id="sNo">
 		<option value="1">1</option>
 		<option value="2">2</option>
@@ -26,17 +28,17 @@
 	</select>
 	<input type="submit" value="예약" onclick="return check()">
 	</form>
-	<input type="button" value="자리 현황" onclick="seatList()">
-	<p>메시지
+	<p>
+	<input type="button" value="자리 현황" onclick="seatList()"> <input type="button" value="내 자리 확인" onclick="location.href='/oneStudent.do?id=${sessionScope.id }'">
+	</p>
 	<div>${arr }</div>
 	<div>${msg}</div>
-	</p>
 
 	<div></div>
 	<p>
 		좌석 배치도
 		<section>
-			<table border="1" cellspacing="0" width="100">
+			<table>
 				<tr>
 					<td id="s1" width="50%" align="center" >1</td>
 					<td id="s2" align="center">2</td>

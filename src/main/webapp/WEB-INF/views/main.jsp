@@ -7,8 +7,10 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/css/main.css" />
+ 
 </head>
 <body>
+
 	<c:if test="${sessionScope.id!=null }">
 
 		<div class="header">
@@ -17,14 +19,14 @@
 			</div>
 		</div>
 
-		<ul style="float: right;">
-			<li>${id }님반갑습니다</li>
-			<li><a href="/oneStudent.do?id=${sessionScope.id }">MyPage</a>||<a
-				href="logout.do" style="font-size: xx-small;">로그아웃</a></li>
+		<ul style="float: right; margin-right: 60px; margin-bottom: 30px;">
+			<li><h3>${id }님 반갑습니다</h3></li>
+			<li><h3><a href="/oneStudent.do?id=${sessionScope.id }"  style="color: #2828CD	">MyPage</a>||<a
+				href="logout.do" style=" color: #2828CD;">로그아웃</a></h3></li>
 		</ul>
 		<div class="content">
 			<h1>여러분의 삶을 변화시키는 곳입니다</h1>
-			<br> <a href="/seatForm">자리 예약하러가기</a>
+			<br> <a href="/seatForm" style="color:white;">자리 예약하러가기</a>
 		</div>
 
 		<div class="footer">

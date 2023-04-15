@@ -153,4 +153,18 @@ public class StudentController {
 		}
 		return msg;
 	}
+	
+	@PostMapping("/userdelete.do")
+	public @ResponseBody String delete(String id,HttpServletRequest request) {
+		int result=mapper.studentdelete(id);
+		String msg="";
+		if(result==1) {
+			msg="1";
+			HttpSession session = request.getSession();
+			session.invalidate();
+		}else {
+			msg="0";
+		}
+		return msg;
+	}
 }
